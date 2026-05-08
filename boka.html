@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Boka hotellrum hos Hotellet i vackra Örby. Enkelt, bekvämt och naturnära">
+    <meta name="keywords"
+        content="boka hotell örby, hotellrum, billigt, hotellet, boka">
+    <meta name="author"
+        content="Felicia Andersson">
+    <title>Hotellet | Boka</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function myFunction() {
+                var x = document.getElementById("navmenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/hotell-logga.webp" alt="hotell logga">
+        </header>
+        
+        <nav class="menu" id="navmenu">
+            <a href="index.html">Start</a>
+            <a href="boka.html">Boka</a>
+            <a href="restaurang.html">Restaurang</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars">☰</i>
+            </a>
+        </nav>
+        <main>
+            <article class="left-column">
+                <h1>Boka rum</h1>
+               <form action="https://httpbin.org/post" method="post">
+                    <fieldset>
+                        <legend>Rum</legend>
+                        <label>Rumstyp
+                            <select name="ans" id="ans">
+                                <option value="standard">Standard</option>
+                                <option value="deluxe">Deluxe</option>
+                                <option value="juniorsuite">Junior Svit</option>
+                                <option value="Suite">Svit</option>
+                            </select>
+                        </label>
+                        <br>
+                        <label for="amount">Antal
+                            <input type="number" name="amount" id="amount" min="1" max="30" step="1">
+                        </label>
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Personlig information</legend>
+                        <label for="first-name">*Förnamn
+                            <input type="text" id="first-name" name="first-name" required>
+                        </label>
+                        <br>
+                        <label for="last-name">*Efternamn
+                            <input type="text" id="last-name" name="last-name" required>
+                        </label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <p>Övriga önskemål</p>
+                        <textarea name="other" id="other" cols="20" rows="3" maxlength="45" placeholder="Specialkost, blombud, sovmorgon"></textarea>
+                        <br>
+                        <input type="checkbox" name="confirm" id="confirm" value="confirm" required>
+                        <label for="confirm">*Jag förstår och accepterar hotellets regler</label>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Boka</button> <button type="reset">Återställ</button>
+                </form>  
+            </article>
+            <div class="right-img">
+                <img src="images/hotell-rum.webp" alt="hotellrum">
+            </div>
+        </main>
+        <footer>
+            <p>
+                | Hotellet | Hotellvägen 1 | 123 45 Hotellstad |
+                    070 000 00 00 |
+            </p>
+        </footer>
+    </div>
+</body> 
+</html>
